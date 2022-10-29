@@ -7,19 +7,20 @@
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="buttons.css">
         <link rel="stylesheet" href="dialogBoxes.css">
+        <script type="text/javascript" src="home.js"></script>
         <script type="text/javascript" src="confirmationDialog.js"></script>
     </head>
-    <body>
+    <body onload="loadHome()">
         <div class="button-div">
-            <button type="button" class="confirmation-button button" id="popupButton" onclick="openPopup()">Click Me!</button>
+            <button type="button" class="confirmation-button button" id="popupButton">Click Me!</button>
         </div>
         <div class="modal" id="confirmation-modal">
             <div class="dialog-box">
-                <span class="dialog-text">Modal Test</span>
+                <span class="dialog-text" id="dialogText">ERROR</span>
             </div>
             <div class="button-div">
-                <button type="button" class="confirmation-button button" id="popupYesButton" onclick="closePopup()">Click Me!</button>
-                <button type="button" class="cancel-button button" id="popupNoButton" onclick="closePopup()">Click Me!</button>
+                <button type="button" class="confirmation-button button" id="popupYesButton" >Yes</button>
+                <button type="button" class="cancel-button button" id="popupNoButton" >Cancel</button>
             </div>
         </div>
     </body>
