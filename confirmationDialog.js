@@ -1,5 +1,7 @@
+var response;
+
 function togglePopup() {
-	document.getElementById("confirmation-modal").classList.toggle("show-modal");
+	document.getElementById("confirmationModal").classList.toggle("show-modal");
 }
 
 function openPopup(msg) {
@@ -9,5 +11,9 @@ function openPopup(msg) {
 
 function closePopup(msg) {
 	togglePopup();
-	return msg;
+	response = msg;
+}
+
+function returnResponse() {
+	return response;
 }

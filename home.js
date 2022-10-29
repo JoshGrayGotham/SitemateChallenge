@@ -12,4 +12,20 @@ function loadHome() {
 	document.getElementById("popupNoButton").addEventListener("click", function() {
 	    closePopup("Cancel");
 	}, false);	
+	observer.observe(document.getElementById("confirmationModal"), options)
 }
+
+function watcher(mutationList, observer) {
+  mutationList.forEach(function(mutation) {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+     	if(!mutation.target.classList.contains('show-modal')) {
+			document.getElementById("displayText").textContent = "You just clicked \"" + returnResponse() + "\".";
+     	}
+    }
+  })
+}
+
+const observer = new MutationObserver(watcher);
+const options = {
+	attributes: true
+};
