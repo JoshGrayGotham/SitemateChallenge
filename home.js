@@ -6,6 +6,9 @@ function loadHome() {
 	document.getElementById("popupButton").addEventListener("click", function() {
 		loadModal("Are you sure you want to continue?")
 	}, false);
+	document.getElementById("popupButton2").addEventListener("click", function() {
+		loadModal("Do you like this message?")
+	}, false);
 	document.getElementById("popupYesButton").addEventListener("click", function() {
 	    closePopup("Yes");
 	}, false);
