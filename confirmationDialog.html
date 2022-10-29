@@ -10,6 +10,17 @@
         <script type="text/javascript" src="confirmationDialog.js"></script>
     </head>
     <body>
-        Test Content!
+        <div class="button-div">
+            <button type="button" class="confirmation-button button" id="popupButton" onclick="openPopup()">Click Me!</button>
+        </div>
+        <div class="modal" id="confirmation-modal">
+            <div class="dialog-box">
+                <span class="dialog-text">Modal Test</span>
+            </div>
+            <div class="button-div">
+                <button type="button" class="confirmation-button button" id="popupYesButton" onclick="closePopup()">Click Me!</button>
+                <button type="button" class="cancel-button button" id="popupNoButton" onclick="closePopup()">Click Me!</button>
+            </div>
+        </div>
     </body>
 </html>
